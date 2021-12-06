@@ -10,7 +10,7 @@ def flat_generator(my_list):
         counter += 1
         if type(my_list[counter]) == list:
             for item in flat_generator(my_list[counter]):
-                print(item)
+                yield item
         else:
             yield my_list[counter]
 
